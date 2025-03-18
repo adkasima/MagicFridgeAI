@@ -1,5 +1,6 @@
 package dev.java10x.MagicFridgeAI.model;
 
+import dev.java10x.MagicFridgeAI.utils.FoodCategoryEnum;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -18,7 +19,7 @@ public class FoodItem {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String name;
-    private String category;
+    private FoodCategoryEnum category;
     private Integer quantity;
     private LocalDateTime expirationDate;
 
